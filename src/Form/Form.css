@@ -1,18 +1,60 @@
 .Form {
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
-.Form-text {
+.Form-input {
     width: 100%;
     font-size: 24px;
-    padding: 0.5em 0.6em;
+    padding: 0.5rem 0.6rem;
     border: 1px solid #ecf0f1;
     border-radius: 4px;
     color: #3c3c3d;
     font-family: monospace;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    line-height: 4rem;
 }
 
-.Form-Status {
+.Form-status {
     background-color: #ecf0f1;
+    color: #3c3c3d;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 0.8rem;
+    padding-top: 0.6rem;
+    margin-bottom: -0.2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: transform 250ms ease, opacity 250ms ease;
+    transform: translateY(0px);
+    line-height: 2rem;
+}
+
+.Form-status--hidden {
+    transform: translateY(40px);
+    opacity: 0;
+}
+
+.Form-button {
+    display: block;
+    background-color: #3c3c3d;
+    color: #ffffff;
+    padding: 0.6rem 0.3rem;
+    border: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    min-height: 4rem;
+}
+
+.Form-button:hover {
+    background-color: #c99d66;
     color: #3c3c3d;
 }

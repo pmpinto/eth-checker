@@ -5,9 +5,17 @@ import "./TransactionList.css"
 const TransactionList = props => {
     const transactions = props.data.map((transaction, index) => {
         return (
-            <tr className="TransactionList-Item" key={index}>
+            <tr className="TransactionList-item" key={index}>
                 <td>{index}</td>
-                <td>{transaction.txhash}</td>
+                <td>
+                    <a
+                        href={`https://etherscan.io/tx/${transaction.txhash}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {transaction.txhash}
+                    </a>
+                </td>
                 <td>{transaction.success ? "✅" : "❌"}</td>
             </tr>
         )
@@ -15,14 +23,14 @@ const TransactionList = props => {
 
     return (
         <table className="TransactionList">
-            <thead className="TransactionList-Header">
+            <thead className="TransactionList-header">
                 <tr>
                     <th>Key</th>
                     <th>TxHash</th>
                     <th>Success</th>
                 </tr>
             </thead>
-            <tbody className="TransactionList-Body">{transactions}</tbody>
+            <tbody className="TransactionList-body">{transactions}</tbody>
         </table>
     )
 }

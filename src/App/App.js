@@ -24,7 +24,7 @@ class App extends Component {
             },
             {
                 txhash:
-                    "0x66dbe393c3ce6fdc9d5f56d1339e24f320a4a5eb95a76e2e7694e60254ac0000",
+                    "0xc53eade04c9d8d08c6f1608e61e7686d7e4b9d2c813158a97c4c3351b7e6e7a6",
                 success: false
             }
         ]
@@ -47,8 +47,15 @@ class App extends Component {
             success: transactionSuccess
         }
 
-        console.log(transaction)
         this.updateStateTransactions(newTransaction)
+    }
+
+    alreadyChecked = txhash => {
+        return (
+            this.state.transactions.filter(
+                transaction => transaction.txhash === txhash
+            ).length > 0
+        )
     }
 
     render() {
@@ -57,14 +64,35 @@ class App extends Component {
                 <header className="App-header">
                     <h1>ETH Checker</h1>
                     <p>
-                        Check if a specific ETH transaction is valid by entering
-                        its TxHash below.
+                        Check if a specific ETH transaction was successful by
+                        entering its TxHash below.
                     </p>
                 </header>
                 <section className="App-content">
-                    <Form addTransaction={this.addTransaction} />
+                    <Form
+                        addTransaction={this.addTransaction}
+                        alreadyChecked={this.alreadyChecked}
+                    />
                     <TransactionList data={this.state.transactions} />
                 </section>
+                <footer className="App-footer">
+                    <p>
+                        Only valid TxHashes will go through. After passing the
+                        first validation wall we'll send it to Etherscan's API
+                        to validate that the transaction was successful.
+                    </p>
+                    <p>
+                        This project can be seen at{" "}
+                        <a
+                            href="https://github.com/pmpinto/eth-checker"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+                        .
+                    </p>
+                </footer>
             </div>
         )
     }

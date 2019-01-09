@@ -2,21 +2,23 @@
     text-align: left;
     width: 100%;
     border-collapse: collapse;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
-.TransactionList-Header th {
+.TransactionList-header th {
     padding: 1rem 0.3rem;
 }
 
-.TransactionList-Body {
+.TransactionList-body {
     color: #3c3c3d;
 }
 
-.TransactionList-Item:hover td {
+.TransactionList-item:hover td {
     background-color: #ecf0f1;
 }
 
-.TransactionList-Item td {
+.TransactionList-item td {
     border-bottom: 1px solid #ecf0f1;
     padding: 0.6rem 0.3rem;
 }
