@@ -1,0 +1,18 @@
+.Form {
+    color: white;
+}
+
+.Form-text {
+    width: 100%;
+    font-size: 24px;
+    padding: 0.5em 0.6em;
+    border: 1px solid #ecf0f1;
+    border-radius: 4px;
+    color: #3c3c3d;
+    font-family: monospace;
+}
+
+.Form-Status {
+    background-color: #ecf0f1;
+    color: #3c3c3d;
+}

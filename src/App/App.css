@@ -1,0 +1,33 @@
+/*
+ * Ethereum branding colors
+ * Dark: #3C3C3D
+ * Camel: #C99D66
+ * Light: #ECF0F1
+ * White: #FFFFFF
+ */
+
+.App {
+    background-color: #ffffff;
+    color: #3c3c3d;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.App-header {
+    background-color: #3c3c3d;
+    color: #ffffff;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(12px + 2vmin);
+    width: 100%;
+}
+
+.App-content {
+    width: 70%;
+    margin-top: 3rem;
+}

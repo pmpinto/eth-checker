@@ -1,0 +1,22 @@
+.TransactionList {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.TransactionList-Header th {
+    padding: 1rem 0.3rem;
+}
+
+.TransactionList-Body {
+    color: #3c3c3d;
+}
+
+.TransactionList-Item:hover td {
+    background-color: #ecf0f1;
+}
+
+.TransactionList-Item td {
+    border-bottom: 1px solid #ecf0f1;
+    padding: 0.6rem 0.3rem;
+}
