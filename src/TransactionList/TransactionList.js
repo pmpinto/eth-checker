@@ -16,7 +16,7 @@ const TransactionList = props => {
                         {transaction.txhash}
                     </a>
                 </td>
-                <td>{transaction.success ? "✅" : "❌"}</td>
+                <td>{transaction.status}</td>
             </tr>
         )
     })
@@ -27,7 +27,7 @@ const TransactionList = props => {
                 <tr>
                     <th>Key</th>
                     <th>TxHash</th>
-                    <th>Success</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody className="TransactionList-body">{transactions}</tbody>

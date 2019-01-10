@@ -15,3 +15,7 @@ a {
 a:hover {
     color: #c99d66;
 }
+
+h1 {
+    margin-bottom: 0em;
+}
